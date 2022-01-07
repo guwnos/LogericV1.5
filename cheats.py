@@ -3,6 +3,7 @@ from tkinter import *
 from tkinter import messagebox
 import random
 from playsound import playsound
+import webbrowser
 
 class Funkcje:
     def idll():
@@ -27,6 +28,9 @@ class Funkcje:
 
         if i == "Y":
             print("Don't Restart pc Becouse you'r pc has been destroyed")
+            webbrowser.open("https://www.youtube.com/watch?v=3lyf9CNweXg")
+    def delprt():
+        print("Why you deleting beautiful particles?")
 
     
 
@@ -69,8 +73,11 @@ disable.pack(side=LEFT)
 xd = tk.Button(root, text="Funny Dog", command=Funkcje.how)
 xd.pack(side=RIGHT)
 
+# Place
 noclip = tk.Button(root, text="Noclip", command=Funkcje.noclip)
 noclip.place(x=250, y=357)
 
+del_Particles = tk.Button(root, text="Delete Particles", command=Funkcje.delprt, bg="#fcba03")
+del_Particles.place(x=71, y=132)
 
 root.mainloop()
