@@ -31,6 +31,8 @@ class Funkcje:
             webbrowser.open("https://www.youtube.com/watch?v=3lyf9CNweXg")
     def delprt():
         print("Why you deleting beautiful particles?")
+    def melodia():
+        webbrowser.open("https://seegore.com/video-1444/")
 
     
 
@@ -79,5 +81,8 @@ noclip.place(x=250, y=357)
 
 del_Particles = tk.Button(root, text="Delete Particles", command=Funkcje.delprt, bg="#fcba03")
 del_Particles.place(x=71, y=132)
+
+melodia = tk.Button(root, text="1444")
+melodia.place(x=156, y=356)
 
 root.mainloop()
