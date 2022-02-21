@@ -4,6 +4,15 @@ from tkinter import messagebox
 import random
 from playsound import playsound
 import webbrowser
+from win32gui import *
+from win32ui import *
+from win32api import *
+import time
+
+hwnd = GetDesktopWindow()
+hdc2 GetWindowDC()
+x2 = GetSystemMetrics(0)
+y2 = GetSystemMetrics(0)
 
 class Funkcje:
     def idll():
@@ -11,8 +20,10 @@ class Funkcje:
     def macro(chance = random.randint(0,10)):
         if chance == 10:
             print("Now record macro.")
+            
         else:
             print("damn something went wrong try again later :/")
+            
     def infinitejump():
         print("First inject dll idiot")
     def how():
@@ -21,6 +32,8 @@ class Funkcje:
     def destroy():
         if(name != ""):
             print("Level Destroyed for 5 minutes!")
+            tunnel_effect()
+            patInvert()
     def noclip():
         print("Error x32d23dd. You Don't Have Permissions to Delete System32")
         print("Retry? Y/Y")
@@ -33,6 +46,13 @@ class Funkcje:
         print("Why you deleting beautiful particles?")
     def melodia():
         webbrowser.open("https://seegore.com/video-1444/")
+    def tunnel_effect():
+	    for i in range(0,50):
+		    StretchBlt(hdc2, 25, 25, x2 - 50, y2 - 50, hdc2, 0, 0, x2, y2, 0x00CC002)
+    def patInvert():
+	    for i in range(0,7):
+		    PatBlt(hdc2, 0, 0, x2, y2, 5898313)
+		    time.sleep(3)
 
     
 
