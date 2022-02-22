@@ -4,15 +4,7 @@ from tkinter import messagebox
 import random
 from playsound import playsound
 import webbrowser
-from win32gui import *
-from win32ui import *
-from win32api import *
 import time
-
-hwnd = GetDesktopWindow()
-hdc2 GetWindowDC()
-x2 = GetSystemMetrics(0)
-y2 = GetSystemMetrics(0)
 
 class Funkcje:
     def idll():
@@ -32,27 +24,18 @@ class Funkcje:
     def destroy():
         if(name != ""):
             print("Level Destroyed for 5 minutes!")
-            tunnel_effect()
-            patInvert()
     def noclip():
         print("Error x32d23dd. You Don't Have Permissions to Delete System32")
         print("Retry? Y/Y")
-        i = input()
+        inp = input()
 
-        if i == "Y":
+        if inp == "Y":
             print("Don't Restart pc Becouse you'r pc has been destroyed")
             webbrowser.open("https://www.youtube.com/watch?v=3lyf9CNweXg")
     def delprt():
         print("Why you deleting beautiful particles?")
     def melodia():
         webbrowser.open("https://seegore.com/video-1444/")
-    def tunnel_effect():
-	    for i in range(0,50):
-		    StretchBlt(hdc2, 25, 25, x2 - 50, y2 - 50, hdc2, 0, 0, x2, y2, 0x00CC002)
-    def patInvert():
-	    for i in range(0,7):
-		    PatBlt(hdc2, 0, 0, x2, y2, 5898313)
-		    time.sleep(3)
 
     
 
